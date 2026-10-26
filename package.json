@@ -1,0 +1,35 @@
+{
+  "name": "roles-de-pago-ecuador",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "db:migrate:theme": "node scripts/migrate-theme.mjs",
+    "db:migrate:payroll": "node scripts/migrate-payroll.mjs",
+    "test:db": "node scripts/verify-payroll.mjs",
+    "db:migrate:scales": "node scripts/migrate-scales.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "jspdf": "^4.0.0",
+    "jspdf-autotable": "^5.0.2",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "@lucide/vue": "^1.61.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "tailwindcss": "^4.1.13",
+    "vite": "^7.1.7"
+  }
+}
